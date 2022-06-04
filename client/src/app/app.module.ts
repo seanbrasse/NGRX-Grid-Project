@@ -6,8 +6,10 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatCardModule} from '@angular/material/card';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AgGridModule } from 'ag-grid-angular';
+import { StoreDevtoolsModule } from "@ngrx/store-devtools"; //Used for debugging store related operations
+import { environment } from '../environments/environment';
 
 
 
@@ -16,12 +18,13 @@ import { AgGridModule } from 'ag-grid-angular';
     AppComponent,
   ],
   imports: [
-BrowserModule,
+    BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatCardModule,
     MatSliderModule,
-    AgGridModule.withComponents(null)
+    AgGridModule.withComponents(null),
+    StoreDevtoolsModule.instrument({ }) //This is wrong
   ],
   providers: [],
   bootstrap: [AppComponent]
