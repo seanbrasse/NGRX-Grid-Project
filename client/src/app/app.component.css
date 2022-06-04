@@ -1,0 +1,16 @@
+.title {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 10px;
+  /* background-color: #373846; */
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  /* background-color: #373846; */
+ }
