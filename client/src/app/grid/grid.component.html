@@ -1,8 +1,9 @@
 <div class="grid">
+  <button (click)="addRow()">Add Row</button>
   <ag-grid-angular
       style="width: 700px; height: 250px;"
       class="ag-theme-balham"
-      [rowData]="gridOptions.rowData"
+      [rowData]="rows$ | async"
       [columnDefs]="gridOptions.columnDefs">
   </ag-grid-angular>
 </div>

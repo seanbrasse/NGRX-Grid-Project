@@ -11,6 +11,8 @@ import { AgGridModule } from 'ag-grid-angular';
 import { StoreDevtoolsModule } from "@ngrx/store-devtools"; //Used for debugging store related operations
 import { environment } from '../environments/environment';
 import { GridComponent } from './grid/grid.component';
+import { StoreModule } from '@ngrx/store';
+import { rowReducer } from './state/rows/row.reducer';
 
 
 @NgModule({
@@ -24,6 +26,7 @@ import { GridComponent } from './grid/grid.component';
     BrowserAnimationsModule,
     MatCardModule,
     MatSliderModule,
+    StoreModule.forRoot({ rows: rowReducer }),
     AgGridModule.withComponents(null),
     StoreDevtoolsModule.instrument({ }) //This is wrong
   ],
