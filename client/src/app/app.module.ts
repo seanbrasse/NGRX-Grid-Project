@@ -10,12 +10,13 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AgGridModule } from 'ag-grid-angular';
 import { StoreDevtoolsModule } from "@ngrx/store-devtools"; //Used for debugging store related operations
 import { environment } from '../environments/environment';
-
+import { GridComponent } from './grid/grid.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    GridComponent,
   ],
   imports: [
     BrowserModule,
