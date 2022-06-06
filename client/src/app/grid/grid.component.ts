@@ -12,6 +12,7 @@ import {
 import {
   ValueGetterParams,
   ValueSetterParams,
+  ValueFormatterParams,
   GridOptions,
 } from 'ag-grid-community';
 import { faPlus, faTrash } from '@fortawesome/free-solid-svg-icons';
@@ -21,10 +22,8 @@ import { faPlus, faTrash } from '@fortawesome/free-solid-svg-icons';
   templateUrl: './grid.component.html',
   styleUrls: ['./grid.component.css'],
 })
-
 export class GridComponent implements OnInit {
-
-  constructor(private store: Store<AppState>) { }
+  constructor(private store: Store<AppState>) {}
 
   @ViewChild(AgGridAngular) agGrid!: AgGridAngular;
   public rows$ = this.store.select(selectAllRows);
@@ -33,8 +32,6 @@ export class GridComponent implements OnInit {
 
   faPlus = faPlus;
   faMinus = faTrash;
-
-
 
   gridOptions = <GridOptions>{
     //use value formatter to set floating point
@@ -55,45 +52,41 @@ export class GridComponent implements OnInit {
         filter: 'agNumberColumnFilter',
         sortable: true,
         floatingFilter: true,
-        // valueSetter allows for updating the cell
+        // valueSetter allows for updating the cell -issues abstracting this function
         valueSetter: (params: ValueSetterParams) => {
           var elementIdx = params.data.id - 1;
-          console.log(elementIdx);
           this.store.dispatch(
             updateRow({
-              selected: params.data.selected,
               id: elementIdx,
-              highPrice: params.newValue,
-              lowPrice: params.data.lowPrice,
+              highPrice: Number(params.newValue),
+              lowPrice: Number(params.data.lowPrice),
             })
           );
           return true;
         },
-
+        valueFormatter: this.decimalPrecision,
       },
       {
         headerName: 'Low',
-        type: 'number',
         field: 'lowPrice',
         maxWidth: 175,
         editable: true,
         filter: 'agNumberColumnFilter',
         sortable: true,
         floatingFilter: true,
-        // valueSetter allows for updating the cell
+        // valueSetter allows for updating the cell -issues abstracting this function
         valueSetter: (params: ValueSetterParams) => {
           var elementIdx = params.data.id - 1;
-          console.log(elementIdx);
           this.store.dispatch(
             updateRow({
-              selected: params.data.selected,
               id: elementIdx,
-              highPrice: params.data.highPrice,
-              lowPrice: params.newValue,
+              highPrice: Number(params.data.highPrice),
+              lowPrice: Number(params.newValue),
             })
           );
           return true;
         },
+        valueFormatter: this.decimalPrecision,
       },
       {
         headerName: 'Difference',
@@ -104,10 +97,10 @@ export class GridComponent implements OnInit {
         sortable: true,
         filter: 'agNumberColumnFilter',
         floatingFilter: true,
+        valueFormatter: this.decimalPrecision,
       },
     ],
   };
-
 
   ngOnInit(): void {
     this.store.dispatch(loadRows());
@@ -120,15 +113,14 @@ export class GridComponent implements OnInit {
   }
 
   removeRow(id: number) {
-    // this.store.dispatch(removeRow({id: params.data.id}))
     this.store.dispatch(removeRow({ id: id }));
   }
 
   deleteRow() {
-	  let selectedNodes = this.agGrid.api.getSelectedNodes();
-    let selectedData = selectedNodes.map(node => node.data);
-    console.log(selectedData)
-    selectedData.forEach(row => this.removeRow(row.id));
+    let selectedNodes = this.agGrid.api.getSelectedNodes();
+    let selectedData = selectedNodes.map((node) => node.data);
+    console.log(selectedData);
+    selectedData.forEach((row) => this.removeRow(row.id));
   }
 
   //Calculate the difference between columns
@@ -136,11 +128,15 @@ export class GridComponent implements OnInit {
     return params.data.highPrice - params.data.lowPrice;
   }
 
-  cellStyling(params:any){
+  cellStyling(params: any) {
     if (params.data.highPrice < params.data.lowPrice) {
       return { 'background-color': 'red' };
     } else {
       return { 'background-color': 'green' };
-   }
+    }
+  }
+
+  decimalPrecision(params: ValueFormatterParams) {
+    return '$' + params.value.toFixed(2);
   }
 }

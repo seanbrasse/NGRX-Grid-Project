@@ -6,10 +6,10 @@ let Row = new Schema(
     id: {
       type: Number,
     },
-    high_price: {
+    highPrice: {
       type: Number,
     },
-    low_price: {
+    lowPrice: {
       type: Number,
     },
     difference: {

@@ -23,7 +23,6 @@ export const initialState: RowState = {
 };
 
 export const rowReducer = createReducer(
-
   // Supply the initial state
   initialState,
 
@@ -41,13 +40,14 @@ export const rowReducer = createReducer(
     ],
   })),
 
-  on(updateRow, (state, { selected, id, highPrice, lowPrice }) => ({
+  on(updateRow, (state, { id, highPrice, lowPrice }) => ({
     ...state,
     rows: state.rows.map((content, i) =>
-      i === id ? { ...content, highPrice: highPrice, lowPrice: lowPrice } : content
+      i === id
+        ? { ...content, highPrice: highPrice, lowPrice: lowPrice }
+        : content
     ),
-  }
-  )),
+  })),
 
   // Remove the row from the rows array
   on(removeRow, (state, { id }) => ({
@@ -60,7 +60,7 @@ export const rowReducer = createReducer(
   // Use this on(loadRows) until we have a database
   on(loadRows, (state) => ({
     status: 'loading',
-    rows: [{id: 1, highPrice: 0, lowPrice: 0 }],
+    rows: [{ id: 1, highPrice: 0, lowPrice: 0 }],
     error: '',
   })),
 

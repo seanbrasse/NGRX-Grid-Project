@@ -3,31 +3,27 @@ import { Row } from './../../row/Row.model';
 
 export const addRow = createAction(
   '[AG-Grid] Add Row',
-  props<{ highPrice: number, lowPrice: number }>()
+  props<{ highPrice: number; lowPrice: number }>()
 );
 
 export const removeRow = createAction(
   '[AG-Grid] Remove Row',
-    props<{ id: number }>()
-)
+  props<{ id: number }>()
+);
 
 export const updateRow = createAction(
   '[AG-Grid] Update Row',
-  props<{ selected: boolean, id: number, highPrice: number, lowPrice: number}>()
-)
+  props<{ id: number; highPrice: number; lowPrice: number }>()
+);
 
 export const loadRows = createAction('[AG-Grid] Load Rows');
 
 export const loadRowsSuccess = createAction(
   '[AG-Grid] Row Load Success',
-  props<{rows: Row[]}>()
+  props<{ rows: Row[] }>()
 );
 
 export const loadRowsFailure = createAction(
   '[AG-Grid] Row Load Failure',
   props<{ error: string }>()
 );
-
-
-
-
