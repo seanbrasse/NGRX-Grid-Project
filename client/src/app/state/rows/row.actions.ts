@@ -13,7 +13,7 @@ export const removeRow = createAction(
 
 export const updateRow = createAction(
   '[AG-Grid] Update Row',
-  props<{ id: number, highPrice: number, lowPrice: number}>()
+  props<{ selected: boolean, id: number, highPrice: number, lowPrice: number}>()
 )
 
 export const loadRows = createAction('[AG-Grid] Load Rows');

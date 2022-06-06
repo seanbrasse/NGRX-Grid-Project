@@ -13,6 +13,7 @@ import { environment } from '../environments/environment';
 import { GridComponent } from './grid/grid.component';
 import { StoreModule } from '@ngrx/store';
 import { rowReducer } from './state/rows/row.reducer';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -27,8 +28,9 @@ import { rowReducer } from './state/rows/row.reducer';
     MatCardModule,
     MatSliderModule,
     StoreModule.forRoot({ rows: rowReducer }),
-    AgGridModule.withComponents(null),
-    StoreDevtoolsModule.instrument({ }) //This is wrong
+    AgGridModule.withComponents(),
+    StoreDevtoolsModule.instrument({ }), //Used for testing the store
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,14 @@
-.grid {
+.add-remove {
+  margin-bottom: 5px;
   display: flex;
-  justify-content: center;
-  padding: 10px;
-  /* background-color: #373846; */
- }
+  justify-content: right;
+}
+
+.space {
+  margin-right: 5px;
+}
+
+/* .ag_grid {
+  width: 900px;
+  height: 800px;
+} */

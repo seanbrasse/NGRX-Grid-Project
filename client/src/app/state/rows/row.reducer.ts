@@ -41,7 +41,7 @@ export const rowReducer = createReducer(
     ],
   })),
 
-  on(updateRow, (state, { id, highPrice, lowPrice }) => ({
+  on(updateRow, (state, { selected, id, highPrice, lowPrice }) => ({
     ...state,
     rows: state.rows.map((content, i) =>
       i === id ? { ...content, highPrice: highPrice, lowPrice: lowPrice } : content
@@ -60,7 +60,7 @@ export const rowReducer = createReducer(
   // Use this on(loadRows) until we have a database
   on(loadRows, (state) => ({
     status: 'loading',
-    rows: [{ id: 1, highPrice: 10, lowPrice: 1 }],
+    rows: [{id: 1, highPrice: 0, lowPrice: 0 }],
     error: '',
   })),
 
