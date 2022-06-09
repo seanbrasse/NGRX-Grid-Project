@@ -17,7 +17,7 @@ rowRoute.route("/add-row").post((req, res, next) => {
 
 // Get all Rows
 rowRoute.route("/").get((req, res) => {
-  Rpw.find((error, data) => {
+  Row.find((error, data) => {
     if (error) {
       return next(error);
     } else {

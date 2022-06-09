@@ -9,7 +9,6 @@ mongoose.Promise = global.Promise;
 mongoose
   .connect(mongoDb.db, {
     useNewUrlParser: true,
-    useFindAndModify: false,
     useUnifiedTopology: true,
   })
   .then(
@@ -33,9 +32,9 @@ app.use(
 app.use(cors());
 
 // Static directory path **Needs to change, not too sure what this does yet
-app.use(
-  express.static(path.join(__dirname, "dist/angular-mean-crud-tutorial"))
-);
+// app.use(
+//   express.static(path.join(__dirname, "dist/angular-mean-crud-tutorial"))
+// );
 
 // API root
 app.use("/api", rowRoute);
@@ -48,20 +47,20 @@ app.listen(port, () => {
 });
 
 // 404 Handler
-app.use((req, res, next) => {
-  next(createError(404));
-});
+// app.use((req, res, next) => {
+//   next(createError(404));
+// });
 
 // Base Route
 app.get("/", (req, res) => {
-  res.send("invaild endpoint");
+  res.send("Success??");
 });
 
-app.get("*", (req, res) => {
-  res.sendFile(
-    path.join(__dirname, "dist/angular-mean-crud-tutorial/index.html")
-  );
-});
+// app.get("*", (req, res) => {
+//   res.sendFile(
+//     path.join(__dirname, "dist/angular-mean-crud-tutorial/index.html")
+//   );
+// });
 
 // error handler
 app.use(function (err, req, res, next) {

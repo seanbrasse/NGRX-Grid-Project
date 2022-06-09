@@ -1,3 +1,3 @@
 module.exports = {
-  db: "mongodb://localhost:27017/db",
+  db: "mongodb+srv://seanbrasse:mydbpassword@cluster0.8ludc.mongodb.net/?retryWrites=true&w=majority",
 };
