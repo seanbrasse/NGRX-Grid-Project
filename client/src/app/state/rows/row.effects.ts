@@ -27,9 +27,9 @@ export class RowEffects {
     this.actions$.pipe(
       ofType(loadRows),
       switchMap(() =>
-        // Call the getTodos method, convert it to an observable
+        // Call the getRows method, convert it to an observable
         from(this.rowService.getRows()).pipe(
-          // Take the returned value and return a new success action containing the todos
+          // Take the returned value and return a new success action containing the rows
           map((rows) => loadRowsSuccess({ rows: rows })),
           // Or... if it errors return a new failure action containing the error
           catchError((error) => of(loadRowsFailure({ error })))

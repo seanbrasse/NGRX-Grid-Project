@@ -12,12 +12,9 @@ let Row = new Schema(
     lowPrice: {
       type: Number,
     },
-    difference: {
-      type: Number,
-    },
   },
   {
-    collection: "rows",
+    collection: "prices",
   }
 );
 

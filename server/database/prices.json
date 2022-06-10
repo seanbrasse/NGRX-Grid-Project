@@ -1,0 +1,801 @@
+[{
+  "id": 1,
+  "highPrice": 98.57,
+  "lowPrice": 160.67
+},{
+  "id": 2,
+  "highPrice": 189.43,
+  "lowPrice": 44.94
+},{
+  "id": 3,
+  "highPrice": 19.92,
+  "lowPrice": 323.86
+},{
+  "id": 4,
+  "highPrice": 37.38,
+  "lowPrice": 167.71
+},{
+  "id": 5,
+  "highPrice": 364.47,
+  "lowPrice": 383.07
+},{
+  "id": 6,
+  "highPrice": 383.8,
+  "lowPrice": 238.67
+},{
+  "id": 7,
+  "highPrice": 318.53,
+  "lowPrice": 307.6
+},{
+  "id": 8,
+  "highPrice": 59.11,
+  "lowPrice": 319.77
+},{
+  "id": 9,
+  "highPrice": 32.37,
+  "lowPrice": 147.45
+},{
+  "id": 10,
+  "highPrice": 95.3,
+  "lowPrice": 175.33
+},{
+  "id": 11,
+  "highPrice": 226.15,
+  "lowPrice": 23.27
+},{
+  "id": 12,
+  "highPrice": 388.46,
+  "lowPrice": 140.95
+},{
+  "id": 13,
+  "highPrice": 138.44,
+  "lowPrice": 357.82
+},{
+  "id": 14,
+  "highPrice": 258.92,
+  "lowPrice": 302
+},{
+  "id": 15,
+  "highPrice": 304.27,
+  "lowPrice": 173.31
+},{
+  "id": 16,
+  "highPrice": 71.61,
+  "lowPrice": 5.75
+},{
+  "id": 17,
+  "highPrice": 81.03,
+  "lowPrice": 2.84
+},{
+  "id": 18,
+  "highPrice": 297.09,
+  "lowPrice": 78.48
+},{
+  "id": 19,
+  "highPrice": 269.48,
+  "lowPrice": 393.45
+},{
+  "id": 20,
+  "highPrice": 214.74,
+  "lowPrice": 148.87
+},{
+  "id": 21,
+  "highPrice": 107.5,
+  "lowPrice": 284.34
+},{
+  "id": 22,
+  "highPrice": 172.56,
+  "lowPrice": 384.37
+},{
+  "id": 23,
+  "highPrice": 319.17,
+  "lowPrice": 328.46
+},{
+  "id": 24,
+  "highPrice": 93.09,
+  "lowPrice": 18.41
+},{
+  "id": 25,
+  "highPrice": 258.12,
+  "lowPrice": 36.62
+},{
+  "id": 26,
+  "highPrice": 113.1,
+  "lowPrice": 279.95
+},{
+  "id": 27,
+  "highPrice": 251.51,
+  "lowPrice": 397.77
+},{
+  "id": 28,
+  "highPrice": 169.6,
+  "lowPrice": 206.52
+},{
+  "id": 29,
+  "highPrice": 132.17,
+  "lowPrice": 54.17
+},{
+  "id": 30,
+  "highPrice": 287.82,
+  "lowPrice": 3.97
+},{
+  "id": 31,
+  "highPrice": 90.63,
+  "lowPrice": 16.52
+},{
+  "id": 32,
+  "highPrice": 356.58,
+  "lowPrice": 215.97
+},{
+  "id": 33,
+  "highPrice": 68.52,
+  "lowPrice": 98.86
+},{
+  "id": 34,
+  "highPrice": 330.45,
+  "lowPrice": 301.46
+},{
+  "id": 35,
+  "highPrice": 311.14,
+  "lowPrice": 237.32
+},{
+  "id": 36,
+  "highPrice": 240.09,
+  "lowPrice": 257.15
+},{
+  "id": 37,
+  "highPrice": 89.34,
+  "lowPrice": 96.03
+},{
+  "id": 38,
+  "highPrice": 24.11,
+  "lowPrice": 337.56
+},{
+  "id": 39,
+  "highPrice": 258.78,
+  "lowPrice": 124.26
+},{
+  "id": 40,
+  "highPrice": 237.5,
+  "lowPrice": 231.4
+},{
+  "id": 41,
+  "highPrice": 392.8,
+  "lowPrice": 187.44
+},{
+  "id": 42,
+  "highPrice": 43.48,
+  "lowPrice": 158.91
+},{
+  "id": 43,
+  "highPrice": 129.77,
+  "lowPrice": 138.26
+},{
+  "id": 44,
+  "highPrice": 365.34,
+  "lowPrice": 356.89
+},{
+  "id": 45,
+  "highPrice": 378.97,
+  "lowPrice": 350.84
+},{
+  "id": 46,
+  "highPrice": 359.11,
+  "lowPrice": 244.84
+},{
+  "id": 47,
+  "highPrice": 298.77,
+  "lowPrice": 43.68
+},{
+  "id": 48,
+  "highPrice": 396.97,
+  "lowPrice": 384.55
+},{
+  "id": 49,
+  "highPrice": 43.93,
+  "lowPrice": 59.27
+},{
+  "id": 50,
+  "highPrice": 138.67,
+  "lowPrice": 27.83
+},{
+  "id": 51,
+  "highPrice": 355.25,
+  "lowPrice": 176.3
+},{
+  "id": 52,
+  "highPrice": 210.18,
+  "lowPrice": 307.9
+},{
+  "id": 53,
+  "highPrice": 50.18,
+  "lowPrice": 111.7
+},{
+  "id": 54,
+  "highPrice": 348.5,
+  "lowPrice": 184.02
+},{
+  "id": 55,
+  "highPrice": 71.19,
+  "lowPrice": 154.58
+},{
+  "id": 56,
+  "highPrice": 17.88,
+  "lowPrice": 200
+},{
+  "id": 57,
+  "highPrice": 298.13,
+  "lowPrice": 2.31
+},{
+  "id": 58,
+  "highPrice": 320.01,
+  "lowPrice": 170.57
+},{
+  "id": 59,
+  "highPrice": 334.31,
+  "lowPrice": 360.85
+},{
+  "id": 60,
+  "highPrice": 379,
+  "lowPrice": 125.19
+},{
+  "id": 61,
+  "highPrice": 147.91,
+  "lowPrice": 45.48
+},{
+  "id": 62,
+  "highPrice": 231.42,
+  "lowPrice": 71.92
+},{
+  "id": 63,
+  "highPrice": 69.26,
+  "lowPrice": 345.28
+},{
+  "id": 64,
+  "highPrice": 139.33,
+  "lowPrice": 159.25
+},{
+  "id": 65,
+  "highPrice": 139.42,
+  "lowPrice": 305.39
+},{
+  "id": 66,
+  "highPrice": 380.61,
+  "lowPrice": 286.38
+},{
+  "id": 67,
+  "highPrice": 315.21,
+  "lowPrice": 329.98
+},{
+  "id": 68,
+  "highPrice": 253.2,
+  "lowPrice": 69.82
+},{
+  "id": 69,
+  "highPrice": 396.77,
+  "lowPrice": 223.09
+},{
+  "id": 70,
+  "highPrice": 117.09,
+  "lowPrice": 373.43
+},{
+  "id": 71,
+  "highPrice": 13.27,
+  "lowPrice": 140.58
+},{
+  "id": 72,
+  "highPrice": 129.79,
+  "lowPrice": 272.64
+},{
+  "id": 73,
+  "highPrice": 202.01,
+  "lowPrice": 338.65
+},{
+  "id": 74,
+  "highPrice": 228.22,
+  "lowPrice": 224.86
+},{
+  "id": 75,
+  "highPrice": 170.91,
+  "lowPrice": 305.55
+},{
+  "id": 76,
+  "highPrice": 46.81,
+  "lowPrice": 355.15
+},{
+  "id": 77,
+  "highPrice": 84.93,
+  "lowPrice": 374.79
+},{
+  "id": 78,
+  "highPrice": 355.03,
+  "lowPrice": 63.6
+},{
+  "id": 79,
+  "highPrice": 83.86,
+  "lowPrice": 197.7
+},{
+  "id": 80,
+  "highPrice": 321.01,
+  "lowPrice": 199.17
+},{
+  "id": 81,
+  "highPrice": 382.21,
+  "lowPrice": 283.47
+},{
+  "id": 82,
+  "highPrice": 174.88,
+  "lowPrice": 191.34
+},{
+  "id": 83,
+  "highPrice": 340.8,
+  "lowPrice": 146.04
+},{
+  "id": 84,
+  "highPrice": 90.8,
+  "lowPrice": 144.4
+},{
+  "id": 85,
+  "highPrice": 197.22,
+  "lowPrice": 180.11
+},{
+  "id": 86,
+  "highPrice": 223.44,
+  "lowPrice": 191.56
+},{
+  "id": 87,
+  "highPrice": 131.74,
+  "lowPrice": 159.07
+},{
+  "id": 88,
+  "highPrice": 261.95,
+  "lowPrice": 144.78
+},{
+  "id": 89,
+  "highPrice": 211.32,
+  "lowPrice": 145.44
+},{
+  "id": 90,
+  "highPrice": 369.75,
+  "lowPrice": 205.53
+},{
+  "id": 91,
+  "highPrice": 328.39,
+  "lowPrice": 170.88
+},{
+  "id": 92,
+  "highPrice": 219.24,
+  "lowPrice": 267.61
+},{
+  "id": 93,
+  "highPrice": 174.04,
+  "lowPrice": 361.95
+},{
+  "id": 94,
+  "highPrice": 74.3,
+  "lowPrice": 18.2
+},{
+  "id": 95,
+  "highPrice": 4.83,
+  "lowPrice": 334.05
+},{
+  "id": 96,
+  "highPrice": 289.32,
+  "lowPrice": 67.44
+},{
+  "id": 97,
+  "highPrice": 198.21,
+  "lowPrice": 225.74
+},{
+  "id": 98,
+  "highPrice": 148.61,
+  "lowPrice": 389.51
+},{
+  "id": 99,
+  "highPrice": 152.75,
+  "lowPrice": 253.86
+},{
+  "id": 100,
+  "highPrice": 283.54,
+  "lowPrice": 305.12
+},{
+  "id": 101,
+  "highPrice": 14.08,
+  "lowPrice": 302.87
+},{
+  "id": 102,
+  "highPrice": 145.93,
+  "lowPrice": 306.07
+},{
+  "id": 103,
+  "highPrice": 71.33,
+  "lowPrice": 127.29
+},{
+  "id": 104,
+  "highPrice": 18.99,
+  "lowPrice": 201.23
+},{
+  "id": 105,
+  "highPrice": 51.06,
+  "lowPrice": 328.41
+},{
+  "id": 106,
+  "highPrice": 342.13,
+  "lowPrice": 212.56
+},{
+  "id": 107,
+  "highPrice": 225.09,
+  "lowPrice": 223.99
+},{
+  "id": 108,
+  "highPrice": 97.15,
+  "lowPrice": 165.63
+},{
+  "id": 109,
+  "highPrice": 210.13,
+  "lowPrice": 22.57
+},{
+  "id": 110,
+  "highPrice": 386.3,
+  "lowPrice": 272.25
+},{
+  "id": 111,
+  "highPrice": 48.44,
+  "lowPrice": 265.99
+},{
+  "id": 112,
+  "highPrice": 216.62,
+  "lowPrice": 399.16
+},{
+  "id": 113,
+  "highPrice": 59.69,
+  "lowPrice": 72.96
+},{
+  "id": 114,
+  "highPrice": 123.46,
+  "lowPrice": 256.63
+},{
+  "id": 115,
+  "highPrice": 62.2,
+  "lowPrice": 337.67
+},{
+  "id": 116,
+  "highPrice": 221.72,
+  "lowPrice": 181.53
+},{
+  "id": 117,
+  "highPrice": 177.66,
+  "lowPrice": 341.26
+},{
+  "id": 118,
+  "highPrice": 116.94,
+  "lowPrice": 253.32
+},{
+  "id": 119,
+  "highPrice": 55.2,
+  "lowPrice": 315.34
+},{
+  "id": 120,
+  "highPrice": 6.22,
+  "lowPrice": 121.55
+},{
+  "id": 121,
+  "highPrice": 361.12,
+  "lowPrice": 80.06
+},{
+  "id": 122,
+  "highPrice": 1.54,
+  "lowPrice": 69.64
+},{
+  "id": 123,
+  "highPrice": 106.06,
+  "lowPrice": 249.82
+},{
+  "id": 124,
+  "highPrice": 224.31,
+  "lowPrice": 329.6
+},{
+  "id": 125,
+  "highPrice": 302.22,
+  "lowPrice": 271.29
+},{
+  "id": 126,
+  "highPrice": 214.75,
+  "lowPrice": 127.37
+},{
+  "id": 127,
+  "highPrice": 305.77,
+  "lowPrice": 242.87
+},{
+  "id": 128,
+  "highPrice": 101.8,
+  "lowPrice": 54.42
+},{
+  "id": 129,
+  "highPrice": 289.17,
+  "lowPrice": 234.22
+},{
+  "id": 130,
+  "highPrice": 371.69,
+  "lowPrice": 138.65
+},{
+  "id": 131,
+  "highPrice": 69.59,
+  "lowPrice": 154.05
+},{
+  "id": 132,
+  "highPrice": 285.8,
+  "lowPrice": 273.77
+},{
+  "id": 133,
+  "highPrice": 12.3,
+  "lowPrice": 183.79
+},{
+  "id": 134,
+  "highPrice": 275.05,
+  "lowPrice": 345.46
+},{
+  "id": 135,
+  "highPrice": 233.29,
+  "lowPrice": 251.92
+},{
+  "id": 136,
+  "highPrice": 145.35,
+  "lowPrice": 372.65
+},{
+  "id": 137,
+  "highPrice": 283.45,
+  "lowPrice": 253.27
+},{
+  "id": 138,
+  "highPrice": 282.06,
+  "lowPrice": 385.77
+},{
+  "id": 139,
+  "highPrice": 40.19,
+  "lowPrice": 372.87
+},{
+  "id": 140,
+  "highPrice": 287.35,
+  "lowPrice": 324.32
+},{
+  "id": 141,
+  "highPrice": 148.72,
+  "lowPrice": 184.43
+},{
+  "id": 142,
+  "highPrice": 207.03,
+  "lowPrice": 291.49
+},{
+  "id": 143,
+  "highPrice": 282.79,
+  "lowPrice": 327.09
+},{
+  "id": 144,
+  "highPrice": 58.98,
+  "lowPrice": 386.49
+},{
+  "id": 145,
+  "highPrice": 343.03,
+  "lowPrice": 269.85
+},{
+  "id": 146,
+  "highPrice": 55.95,
+  "lowPrice": 335.69
+},{
+  "id": 147,
+  "highPrice": 25.92,
+  "lowPrice": 3.37
+},{
+  "id": 148,
+  "highPrice": 253.9,
+  "lowPrice": 107.73
+},{
+  "id": 149,
+  "highPrice": 212.43,
+  "lowPrice": 26.33
+},{
+  "id": 150,
+  "highPrice": 242.96,
+  "lowPrice": 273.79
+},{
+  "id": 151,
+  "highPrice": 308.38,
+  "lowPrice": 79.44
+},{
+  "id": 152,
+  "highPrice": 274.17,
+  "lowPrice": 117.91
+},{
+  "id": 153,
+  "highPrice": 56.61,
+  "lowPrice": 385.06
+},{
+  "id": 154,
+  "highPrice": 63.07,
+  "lowPrice": 40.45
+},{
+  "id": 155,
+  "highPrice": 333.51,
+  "lowPrice": 286.69
+},{
+  "id": 156,
+  "highPrice": 76.82,
+  "lowPrice": 341.71
+},{
+  "id": 157,
+  "highPrice": 339,
+  "lowPrice": 226.61
+},{
+  "id": 158,
+  "highPrice": 261.5,
+  "lowPrice": 147.05
+},{
+  "id": 159,
+  "highPrice": 201.17,
+  "lowPrice": 136.42
+},{
+  "id": 160,
+  "highPrice": 228.72,
+  "lowPrice": 14.89
+},{
+  "id": 161,
+  "highPrice": 142.89,
+  "lowPrice": 290.08
+},{
+  "id": 162,
+  "highPrice": 237.99,
+  "lowPrice": 194.59
+},{
+  "id": 163,
+  "highPrice": 134.83,
+  "lowPrice": 36.6
+},{
+  "id": 164,
+  "highPrice": 392.74,
+  "lowPrice": 85.75
+},{
+  "id": 165,
+  "highPrice": 267.44,
+  "lowPrice": 312.57
+},{
+  "id": 166,
+  "highPrice": 360.02,
+  "lowPrice": 24.78
+},{
+  "id": 167,
+  "highPrice": 326.13,
+  "lowPrice": 22.69
+},{
+  "id": 168,
+  "highPrice": 310,
+  "lowPrice": 160.62
+},{
+  "id": 169,
+  "highPrice": 66.15,
+  "lowPrice": 271.54
+},{
+  "id": 170,
+  "highPrice": 88.49,
+  "lowPrice": 353.27
+},{
+  "id": 171,
+  "highPrice": 281.12,
+  "lowPrice": 231.23
+},{
+  "id": 172,
+  "highPrice": 309.72,
+  "lowPrice": 281.57
+},{
+  "id": 173,
+  "highPrice": 49.27,
+  "lowPrice": 222.63
+},{
+  "id": 174,
+  "highPrice": 326.37,
+  "lowPrice": 149.73
+},{
+  "id": 175,
+  "highPrice": 82.44,
+  "lowPrice": 158.03
+},{
+  "id": 176,
+  "highPrice": 236.52,
+  "lowPrice": 390.45
+},{
+  "id": 177,
+  "highPrice": 71.7,
+  "lowPrice": 33.35
+},{
+  "id": 178,
+  "highPrice": 190.46,
+  "lowPrice": 93.44
+},{
+  "id": 179,
+  "highPrice": 115.69,
+  "lowPrice": 245.2
+},{
+  "id": 180,
+  "highPrice": 79.67,
+  "lowPrice": 259.02
+},{
+  "id": 181,
+  "highPrice": 194.18,
+  "lowPrice": 5.49
+},{
+  "id": 182,
+  "highPrice": 161,
+  "lowPrice": 93.24
+},{
+  "id": 183,
+  "highPrice": 314.83,
+  "lowPrice": 84.77
+},{
+  "id": 184,
+  "highPrice": 371.83,
+  "lowPrice": 319.85
+},{
+  "id": 185,
+  "highPrice": 289.34,
+  "lowPrice": 187.13
+},{
+  "id": 186,
+  "highPrice": 242.89,
+  "lowPrice": 335.99
+},{
+  "id": 187,
+  "highPrice": 25.3,
+  "lowPrice": 22.58
+},{
+  "id": 188,
+  "highPrice": 120.09,
+  "lowPrice": 67.52
+},{
+  "id": 189,
+  "highPrice": 312.64,
+  "lowPrice": 237.16
+},{
+  "id": 190,
+  "highPrice": 168.97,
+  "lowPrice": 339.94
+},{
+  "id": 191,
+  "highPrice": 87.48,
+  "lowPrice": 270.59
+},{
+  "id": 192,
+  "highPrice": 140.88,
+  "lowPrice": 283.82
+},{
+  "id": 193,
+  "highPrice": 139.02,
+  "lowPrice": 333.29
+},{
+  "id": 194,
+  "highPrice": 398.64,
+  "lowPrice": 155.22
+},{
+  "id": 195,
+  "highPrice": 376.29,
+  "lowPrice": 64.61
+},{
+  "id": 196,
+  "highPrice": 77.46,
+  "lowPrice": 62.19
+},{
+  "id": 197,
+  "highPrice": 158.86,
+  "lowPrice": 295.96
+},{
+  "id": 198,
+  "highPrice": 30.32,
+  "lowPrice": 139.45
+},{
+  "id": 199,
+  "highPrice": 292.66,
+  "lowPrice": 161.74
+},{
+  "id": 200,
+  "highPrice": 199.31,
+  "lowPrice": 70.39
+}]

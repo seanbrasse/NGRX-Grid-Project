@@ -18,7 +18,7 @@ mongoose
     (error) => {
       console.log("Database error: " + error);
     }
-  );
+  ); 
 
 const rowRoute = require("./routes/row.routes");
 

@@ -7,6 +7,15 @@
       "name": "Launch Edge against localhost",
       "url": "http://localhost:4200/",
       "webRoot": "${workspaceFolder}"
+    },
+    {
+      "name": "Launch Program",
+      "program": "${workspaceFolder}/server/index.js",
+      "request": "launch",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "node"
     }
-  ]
+  ],
 }

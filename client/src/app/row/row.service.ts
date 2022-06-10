@@ -6,7 +6,9 @@ import { Row } from './Row.model';
 export class RowService {
   private storageInitialised = false;
 
-  constructor(private storage: Storage) {}
+  constructor(private storage: Storage) {
+
+  }
 
   async getRows(): Promise<Row[]> {
     if (!this.storageInitialised) await this.storage.create();
