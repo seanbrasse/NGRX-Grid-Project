@@ -5,34 +5,35 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
-import {MatCardModule} from '@angular/material/card';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { MatCardModule } from '@angular/material/card';
+import { HttpClientModule } from '@angular/common/http';
 import { AgGridModule } from 'ag-grid-angular';
-import { StoreDevtoolsModule } from "@ngrx/store-devtools"; //Used for debugging store related operations
+import { StoreDevtoolsModule } from '@ngrx/store-devtools'; //Used for debugging store related operations
 import { environment } from '../environments/environment';
 import { GridComponent } from './grid/grid.component';
 import { StoreModule } from '@ngrx/store';
 import { rowReducer } from './state/rows/row.reducer';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
+import { EffectsModule } from '@ngrx/effects';
+import { RowEffects } from './state/rows/row.effects';
+import { RowService } from './row/row.service';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    GridComponent,
-  ],
+  declarations: [AppComponent, GridComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatCardModule,
     MatSliderModule,
+    HttpClientModule,
+    EffectsModule.forRoot([RowEffects]),
     StoreModule.forRoot({ rows: rowReducer }),
     AgGridModule.withComponents(),
-    StoreDevtoolsModule.instrument({ }), //Used for testing the store
-    FontAwesomeModule
+    StoreDevtoolsModule.instrument({}), //Used for testing the store
+    FontAwesomeModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [RowService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

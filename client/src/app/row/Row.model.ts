@@ -1,5 +1,5 @@
 export interface Row {
-  id: number;
+  _id: string;
   highPrice: number;
   lowPrice: number;
   difference?: number;

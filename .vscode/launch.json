@@ -1,13 +1,12 @@
 {
   "version": "0.2.0",
-  "configurations": [
-    {
-      "type": "pwa-msedge",
-      "request": "launch",
-      "name": "Launch Edge against localhost",
-      "url": "http://localhost:4200/",
-      "webRoot": "${workspaceFolder}"
-    },
+  "configurations": [{
+    "name": "Launch Chrome",
+    "request": "launch",
+    "type": "chrome",
+    "url": "http://localhost:4200",
+    "webRoot": "${workspaceFolder}/client",
+  },
     {
       "name": "Launch Program",
       "program": "${workspaceFolder}/server/index.js",

@@ -1,12 +1,10 @@
-import { state } from '@angular/animations';
 import { createReducer, on } from '@ngrx/store';
 import { Row } from './../../row/Row.model';
 import {
-  addRow,
-  loadRows,
-  updateRow,
+  createRow,
+  changeRow,
   loadRowsSuccess,
-  removeRow,
+  deleteRow,
   loadRowsFailure,
 } from './row.actions';
 
@@ -22,47 +20,43 @@ export const initialState: RowState = {
   status: 'pending',
 };
 
+function getRandomArbitrary(min: number, max: number) {
+  return Math.random() * (max - min) + min;
+}
+
 export const rowReducer = createReducer(
   // Supply the initial state
   initialState,
 
   // Add the new row to the rows array
-  on(addRow, (state, { highPrice, lowPrice }) => ({
+  on(createRow, (state, { _id, highPrice, lowPrice }) => ({
     ...state,
-    rows: [
-      ...state.rows,
-      {
-        id: state.rows.length + 1,
-        highPrice: highPrice,
-        lowPrice: lowPrice,
-        difference: highPrice - lowPrice,
-      },
-    ],
+    rows: state.rows.concat({
+      _id: _id,
+      highPrice: highPrice,
+      lowPrice: lowPrice,
+      difference: highPrice - lowPrice,
+    }),
   })),
 
-  on(updateRow, (state, { id, highPrice, lowPrice }) => ({
+  on(changeRow, (state, { _id, highPrice, lowPrice }) => ({
     ...state,
-    rows: state.rows.map((content, i) =>
-      i === id
+    rows: state.rows.map((content, _) =>
+      content._id == _id
         ? { ...content, highPrice: highPrice, lowPrice: lowPrice }
         : content
     ),
   })),
 
   // Remove the row from the rows array
-  on(removeRow, (state, { id }) => ({
+  on(deleteRow, (state, { _id }) => ({
     ...state,
-    rows: state.rows.filter((row) => row.id !== id),
+    rows: state.rows.filter((row) => row._id !== _id),
   })),
 
   // Trigger loading the rows
   // on(loadRows, (state) => ({...state, status: 'loading', rows: [{id}] })),
   // Use this on(loadRows) until we have a database
-  on(loadRows, (state) => ({
-    status: 'loading',
-    rows: [{ id: 1, highPrice: 0, lowPrice: 0 }],
-    error: '',
-  })),
 
   // Handle successfully loaded rows
   on(loadRowsSuccess, (state, { rows }) => ({

@@ -38,26 +38,26 @@ export class GridComponent implements OnInit {
     columnDefs: [
       {
         headerName: 'Id',
-        field: 'id',
-        maxWidth: 175,
+        field: '_id',
+        maxWidth: 200,
         sortable: true,
-        filter: 'agNumberColumnFilter',
+        filter: 'agTextColumnFilter',
         floatingFilter: true,
       },
       {
         headerName: 'High',
         field: 'highPrice',
-        maxWidth: 175,
+        maxWidth: 163,
         editable: true,
         filter: 'agNumberColumnFilter',
         sortable: true,
         floatingFilter: true,
         // valueSetter allows for updating the cell -issues abstracting this function
         valueSetter: (params: ValueSetterParams) => {
-          var elementIdx = params.data.id - 1;
+          console.log(params.data._id);
           this.store.dispatch(
             updateRow({
-              id: elementIdx,
+              _id: params.data._id,
               highPrice: Number(params.newValue),
               lowPrice: Number(params.data.lowPrice),
             })
@@ -69,17 +69,16 @@ export class GridComponent implements OnInit {
       {
         headerName: 'Low',
         field: 'lowPrice',
-        maxWidth: 175,
+        maxWidth: 163,
         editable: true,
         filter: 'agNumberColumnFilter',
         sortable: true,
         floatingFilter: true,
         // valueSetter allows for updating the cell -issues abstracting this function
         valueSetter: (params: ValueSetterParams) => {
-          var elementIdx = params.data.id - 1;
           this.store.dispatch(
             updateRow({
-              id: elementIdx,
+              _id: params.data._id,
               highPrice: Number(params.data.highPrice),
               lowPrice: Number(params.newValue),
             })
@@ -91,7 +90,7 @@ export class GridComponent implements OnInit {
       {
         headerName: 'Difference',
         field: 'difference',
-        maxWidth: 175,
+        maxWidth: 163,
         valueGetter: this.highLowDiff,
         cellStyle: this.cellStyling,
         sortable: true,
@@ -103,6 +102,8 @@ export class GridComponent implements OnInit {
   };
 
   ngOnInit(): void {
+    // We create a timer to simulate a data source that loads data every 250 ms and pause onclick
+    // setInterval(() => { this.store.dispatch(loadRows()); }, 250);
     this.store.dispatch(loadRows());
   }
 
@@ -112,15 +113,15 @@ export class GridComponent implements OnInit {
     );
   }
 
-  removeRow(id: number) {
-    this.store.dispatch(removeRow({ id: id }));
+  removeRow(_id: string) {
+    this.store.dispatch(removeRow({ _id: _id }));
   }
 
   deleteRow() {
     let selectedNodes = this.agGrid.api.getSelectedNodes();
     let selectedData = selectedNodes.map((node) => node.data);
     console.log(selectedData);
-    selectedData.forEach((row) => this.removeRow(row.id));
+    selectedData.forEach((row) => this.removeRow(row._id));
   }
 
   //Calculate the difference between columns

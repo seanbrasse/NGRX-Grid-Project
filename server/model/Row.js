@@ -3,9 +3,6 @@ const Schema = mongoose.Schema;
 
 let Row = new Schema(
   {
-    id: {
-      type: Number,
-    },
     highPrice: {
       type: Number,
     },

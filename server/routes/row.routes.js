@@ -4,6 +4,10 @@ const app = express();
 const rowRoute = express.Router();
 let Row = require("../model/Row");
 
+function getRandomArbitrary(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
 // Add Row
 rowRoute.route("/add-row").post((req, res, next) => {
   Row.create(req.body, (error, data) => {
@@ -13,6 +17,29 @@ rowRoute.route("/add-row").post((req, res, next) => {
       res.json(data);
     }
   });
+});
+
+rowRoute.route("/get-random").get((req, res) => {
+  Row.updateMany(
+    {},
+    {
+      highPrice: getRandomArbitrary(1, 500),
+      lowPrice: getRandomArbitrary(1, 500),
+    },
+    (error, data) => {
+      if (error) {
+        return next(error);
+      } else {
+        Row.find({}, (error, data) => {
+          if (error) {
+            return next(error);
+          } else {
+            res.json(data);
+          }
+        });
+      }
+    }
+  );
 });
 
 // Get all Rows
@@ -28,7 +55,7 @@ rowRoute.route("/getAll").get((req, res) => {
 
 // Get Row
 rowRoute.route("/read-row/:id").get((req, res) => {
-  Row.find({ id: req.params.id }, (error, data) => {
+  Row.findById(req.params.id, (error, data) => {
     if (error) {
       return next(error);
     } else {
@@ -39,15 +66,15 @@ rowRoute.route("/read-row/:id").get((req, res) => {
 
 // Update Row
 rowRoute.route("/update-row/:id").put((req, res, next) => {
-  Row.findOneAndUpdate(
-    {"id": req.params.id},
+  Row.findByIdAndUpdate(
+    req.params.id,
     {
       $set: req.body,
     },
+    { new: true },
     (error, data) => {
       if (error) {
         return next(error);
-        console.log(error);
       } else {
         res.json(data);
         console.log("Row updated successfully!");
@@ -58,13 +85,11 @@ rowRoute.route("/update-row/:id").put((req, res, next) => {
 
 // Delete Row
 rowRoute.route("/delete-row/:id").delete((req, res, next) => {
-  Row.findOneAndRemove({ id: req.params.id }, (error, data) => {
+  Row.findByIdAndDelete(req.params.id, (error, data) => {
     if (error) {
       return next(error);
     } else {
-      res.status(200).json({
-        msg: data,
-      });
+      res.status(200).json(data);
     }
   });
 });

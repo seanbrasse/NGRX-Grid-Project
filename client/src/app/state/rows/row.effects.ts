@@ -2,31 +2,36 @@ import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import {
   addRow,
+  createRow,
   removeRow,
   loadRows,
+  deleteRow,
+  changeRow,
   loadRowsSuccess,
   loadRowsFailure,
-} from './row.actions'
+  updateRow,
+} from './row.actions';
 import { RowService } from '../../row/row.service';
 import { of, from } from 'rxjs';
-import { switchMap, map, catchError, withLatestFrom } from 'rxjs/operators';
-import { Store } from '@ngrx/store';
+import {
+  switchMap,
+  mergeMap,
+  map,
+  catchError,
+  withLatestFrom,
+} from 'rxjs/operators';
 import { selectAllRows } from './row.selector';
 import { AppState } from '../app.state';
 
 @Injectable()
 export class RowEffects {
-  constructor(
-    private actions$: Actions,
-    private store: Store<AppState>,
-    private rowService: RowService
-  ) {}
+  constructor(private actions$: Actions, private rowService: RowService) {}
 
   // Run this code when a loadRows action is dispatched
   loadRows$ = createEffect(() =>
     this.actions$.pipe(
       ofType(loadRows),
-      switchMap(() =>
+      mergeMap(() =>
         // Call the getRows method, convert it to an observable
         from(this.rowService.getRows()).pipe(
           // Take the returned value and return a new success action containing the rows
@@ -38,15 +43,36 @@ export class RowEffects {
     )
   );
 
-  // Run this code when the addRow or removeRow action is dispatched
-  saveRows$ = createEffect(
-    () =>
-      this.actions$.pipe(
-        ofType(addRow, removeRow),
-        withLatestFrom(this.store.select(selectAllRows)),
-        switchMap(([action, rows]) => from(this.rowService.saveRows(rows)))
-      ),
-    // Most effects dispatch another action, but this one is just a "fire and forget" effect
-    { dispatch: false }
+  removeRow$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(removeRow),
+      mergeMap(({ _id }) =>
+        this.rowService.delete(_id).pipe(map(() => deleteRow({ _id })))
+      )
+    )
+  );
+
+  addRow$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(addRow),
+      mergeMap(({ highPrice, lowPrice }) =>
+        this.rowService.add(highPrice, lowPrice).pipe(map((b) => createRow(b)))
+      )
+    )
+  );
+
+  updateRow$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(updateRow),
+      switchMap(({ _id, highPrice, lowPrice }) =>
+        this.rowService
+          .update(_id, highPrice, lowPrice)
+          .pipe(map((n) => {
+            console.log("request: "+JSON.stringify({high: highPrice, low: lowPrice, _id: _id}));
+            console.log(n);
+            return loadRowsFailure({ error: 'Update failed' })
+          }))
+      )
+    )
   );
 }
