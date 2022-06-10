@@ -10,4 +10,6 @@ html, body {
    padding: 5px;
    box-sizing: border-box;
    -webkit-overflow-scrolling: touch;
+   font-family: Roboto;
+   background-color: #DAE3E5;
 }

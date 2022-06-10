@@ -54,10 +54,6 @@ export const rowReducer = createReducer(
     rows: state.rows.filter((row) => row._id !== _id),
   })),
 
-  // Trigger loading the rows
-  // on(loadRows, (state) => ({...state, status: 'loading', rows: [{id}] })),
-  // Use this on(loadRows) until we have a database
-
   // Handle successfully loaded rows
   on(loadRowsSuccess, (state, { rows }) => ({
     ...state,

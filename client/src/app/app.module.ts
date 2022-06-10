@@ -9,7 +9,6 @@ import { MatCardModule } from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
 import { AgGridModule } from 'ag-grid-angular';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools'; //Used for debugging store related operations
-import { environment } from '../environments/environment';
 import { GridComponent } from './grid/grid.component';
 import { StoreModule } from '@ngrx/store';
 import { rowReducer } from './state/rows/row.reducer';
@@ -24,14 +23,14 @@ import { RowService } from './row/row.service';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FontAwesomeModule,
     MatCardModule,
     MatSliderModule,
     HttpClientModule,
     EffectsModule.forRoot([RowEffects]),
     StoreModule.forRoot({ rows: rowReducer }),
     AgGridModule.withComponents(),
-    StoreDevtoolsModule.instrument({}), //Used for testing the store
-    FontAwesomeModule,
+    StoreDevtoolsModule.instrument({}),
   ],
   providers: [RowService],
   bootstrap: [AppComponent],

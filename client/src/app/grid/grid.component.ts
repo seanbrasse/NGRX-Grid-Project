@@ -34,7 +34,6 @@ export class GridComponent implements OnInit {
   faMinus = faTrash;
 
   gridOptions = <GridOptions>{
-    //use value formatter to set floating point
     columnDefs: [
       {
         headerName: 'Id',
@@ -102,8 +101,6 @@ export class GridComponent implements OnInit {
   };
 
   ngOnInit(): void {
-    // We create a timer to simulate a data source that loads data every 250 ms and pause onclick
-    // setInterval(() => { this.store.dispatch(loadRows()); }, 250);
     this.store.dispatch(loadRows());
   }
 
@@ -137,6 +134,7 @@ export class GridComponent implements OnInit {
     }
   }
 
+  //use value formatter to set floating point precision
   decimalPrecision(params: ValueFormatterParams) {
     return '$' + params.value.toFixed(2);
   }
